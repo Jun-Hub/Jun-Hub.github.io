@@ -1,0 +1,25 @@
+---
+title: "Kotlin Scope Functions(let, also, apply, run, with) EASY TO UNDERSTAND"
+date: 2020-12-16 23:50:28 -0400
+categories: kotlin
+---
+
+Have you tried to understand 'Scope Function'??
+
+Yes, There are ton of posts in the Internet. If you haven't understood that usage of each Scope Functions cleary, this post would help you.
+
+First of all, ![이미지 이름](이미지 주소)
+
+Let's see this
+
+```kotlin
+fun print_hi(name):
+  print("hello", name)
+print_hi("Joon")
+```
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
