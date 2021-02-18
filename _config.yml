@@ -96,13 +96,13 @@ analytics:
 author:
   name             : "Joon"
   avatar           : "/assets/images/Kotlin-feature.png"
-  bio              : "Would I work at U.S.A?"
-  location         : "Earth"
+  bio              : "Android | Kotlin | see more.."
+  location         : "South Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "ileemail2@gmail.com"
+      url: "https://ileemail2@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
