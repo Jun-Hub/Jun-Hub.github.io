@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
 Internal Code😯
 -------------------
-```kotlin
+```java
 public static class GetContent extends ActivityResultContract<String, Uri> {
 
     @CallSuper
