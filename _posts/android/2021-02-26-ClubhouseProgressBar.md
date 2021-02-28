@@ -198,7 +198,11 @@ In ```TypeEvaluator``` you can manipulate in fine detail animation. Observe ```f
 
 *****
 
-💫If you want to see more specific full code, visit [my github repo][clubhouseProgressBar-repo]
+💫Do you want to see more specific full code? Visit [my github repo][clubhouseProgressBar-repo]
+<br>
+<br>
+
+If there's a mistake, always welcome your opinion!
 
 
 [clubhouseProgressBar-repo]: https://github.com/Jun-Hub/ClubhouseProgressBar/tree/master/ChProgressBar/src/main/java/com/github/joon/chprogressbar
