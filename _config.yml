@@ -31,7 +31,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments: true
-  provider               : true "disqus" #"disqus", "discourse", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : true, "disqus" #"disqus", "discourse", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : https://joon-github-io.disqus.com
   discourse:
