@@ -1,7 +1,7 @@
 ---
 title: "Your First Custom View: Clubhouse ProgressBar!"
 date: 2021-02-26 23:50:28 -0400
-categories: android
+categories: android progressBar
 ---
 
 No doubt about that **Clubhouse** is the most hottest social media recently. There is no special UI/UX which is never have seen anywhere else.
@@ -9,14 +9,16 @@ But I'm impressed by the ProgressBar. Even if it is not special something, it's 
 <br>
 
 It could be a good example of Custom View. Because its view is simple and doesn't have heavy animation.
-</br>
-</br>
+<br>
+<br>
+<br>
 
-So what the heck is *Clubhose ProgressBar*?
+So what the heck is *Clubhouse ProgressBar*?
 --------------------------------------------------
 <img src="https://user-images.githubusercontent.com/54348567/109168128-da4ffa00-77c1-11eb-8771-bf014bd6e075.GIF" width="300" height="620">
-</br>
-</br>
+<br>
+<br>
+<br>
 
 DotDrawable.class⚫️
 -------------------------
@@ -35,12 +37,13 @@ class DotDrawable(private val radius: Float,
     override fun getOpacity(): Int = PixelFormat.TRANSLUCENT
 }
 ```
-This is Dot Class which is created in CustomView we gonna make. It draw a Circle(dot) at center of bounds which means something like drawing paper.
-We going to set bounds at CustomView Class.
-</br>
-And make sure that declare *paint* as a ```public var``` in Constructor! not a ```private val``` or ```public val```. We will check below why it should be a ```public var```
-</br>
-</br>
+This is Dot Class which is created in ProgressBar we gonna make. It draw a Circle(dot) at center of ```bounds``` which means something like drawing paper.
+We going to set ```bounds``` at ProgressBar Class.
+<br>
+Make sure that declare ```paint``` as a ```public var``` in Constructor! Not a ```private val``` or ```public val```. We will check below why it should be a ```public var```
+<br>
+<br>
+<br>
 
 attrs.xml
 ----------------------
@@ -57,7 +60,7 @@ attrs.xml
     </declare-styleable>
 </resources>
 ```
-Make this at ```res/values``` folder. This is Custom Attributes used at layout file. So after this CustomView made, you can specify attributes like below.
+Make this at ```res/values``` folder. This is Custom Attributes will be used at Layout. After all the work is done, you can specify attributes like below.
 ```xml
 <your.package.name.ClubhouseProgressBar
     android:layout_width="wrap_content"
@@ -69,8 +72,9 @@ Make this at ```res/values``` folder. This is Custom Attributes used at layout f
     app:activeColor="@color/purple_700"
     app:animationDuration="500" />
 ```
-</br>
-</br>
+<br>
+<br>
+<br>
 
 ClubhouseProgressBar.class
 ---------------------------------
@@ -97,8 +101,9 @@ init {
         }
     }
 ```
-First of all, get Attributes that user set from layout.xml. And add Dot object into dotList(mutableList).  
-</br>
+First of all, get Attributes that user set from Layout. And add Dot object into ```dotList```(mutableList).  
+<br>
+<br>
 
 
 ```kotlin
@@ -117,24 +122,28 @@ private fun adjustDotBounds() {
     val paddingStart = (measuredWidth - totalDotWidth)/2f
 
     var left = paddingStart.toInt()
+	val top = 0
     var right = left + diameter
+	val bottom = measuredHeight
 
     dotList.forEach {
-        // adjust as if 'setGravity' center
-        it.setBounds(left, 0, right, measuredHeight)
+        it.setBounds(left, top, right, bottom)
         left += diameterWithInterval
         right += diameterWithInterval
     }
 }
 ```
-Now it's time to set bounds of each dot. *totalDotWidth* is every dot diameter plus every dotInterval. 
-For example, if ```dotRadius``` is 30 ```dotCount``` is 5 and ```dotInterval``` is 10, the ```totalDotWidth``` is a 340.
-```paddingStart``` is for no matter what user set width of this view, locate at center like *gravity center*. We don't have to consider the height, because
-regardless of height user set, it will be located at center of total view height.
-</br>
-Finally, set bounds of each dot as give each coordinate(left, top, right, bottom). Dot will be drew center of this bounds.
-</br>
-</br>
+<img src="https://user-images.githubusercontent.com/54348567/109411039-7c4e2d00-79e2-11eb-976e-c120e77e5df8.jpg" width="900" height="400">
+
+Now it's time to set bounds of each dot. *totalDotWidth* is the sum of every dot's diameter and every dotInterval. 
+For example, if ```dotRadius``` is 30, ```dotCount``` is 5 and ```dotInterval``` is 10, the ```totalDotWidth``` is a 340.
+```paddingStart``` is for no matter what width of this view user sets, locate at center like *gravity center*. We don't have to consider the height, because
+Clubhouse ProgressBar is only horizontal line.
+<br>
+Finally, set bounds of each dot by giving each coordinate. Dot will be drew center of this bounds.
+<br>
+<br>
+<br>
 
 ```kotlin
 override fun onAttachedToWindow() {
@@ -172,10 +181,10 @@ override fun onAttachedToWindow() {
     }
 }
 ```
-We just need animation about change color of dots. So change ```paint``` by ObjectAnimator.
-For ObjectAnimator access to ```paint``` property of Dot, we should have set as a ```public var``` like above.
-```public var``` make ```get``` and ```set``` automatically.
-If you work with Java, you should add ```set``` method like below.
+We need animation to change color of dots. So change ```paint``` by ObjectAnimator.
+To ObjectAnimator access to ```paint``` property of Dot, we should have set as a ```public var``` as mention above.
+```public var``` makes *getter* and *setter* automatically.
+If you work with Java, you should add *setter* method like below.
 ```java
 public void setPaint(Paint paint) {
     this.paint = paint;
@@ -183,8 +192,10 @@ public void setPaint(Paint paint) {
 ```
 <br>
 
-In ```TypeEvaluator``` you can manipulate in fine detail. Observe ```fraction``` in Log when animation is running, you can catch how ```fraction``` works.
-</br>
+In ```TypeEvaluator``` you can manipulate in fine detail animation. Observe ```fraction``` at Log when animation is running, you can catch how ```fraction``` works.
+<br>
+<br>
+
 *****
 
 💫If you want to see more specific full code, visit [my github repo][clubhouseProgressBar-repo]
