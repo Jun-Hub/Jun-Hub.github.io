@@ -2,6 +2,7 @@
 title: "Activity Result API: RegisterForActivityResult"
 date: 2021-02-16 23:50:28 -0400
 categories: android
+classes: wide
 ---
 
 Almost every Android developers have tried passing data and getting response between two activities. 
