@@ -2,6 +2,7 @@
 title: "[Jetpack Compose] LazyColumn: Escape from Recyclerview"
 date: 2021-03-08 15:50:28 -0400
 categories: android compose
+classes: wide
 ---
 
 Last month, Jetpack Compose Beta was released!  
