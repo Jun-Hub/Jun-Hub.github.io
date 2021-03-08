@@ -1,4 +1,3 @@
-    
 ---
 layout: null
 sitemap:
@@ -31,5 +30,3 @@ sitemap:
     {% endunless %}
   {% endfor %}
 </urlset>
-    
-    
