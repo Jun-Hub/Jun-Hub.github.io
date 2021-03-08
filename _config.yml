@@ -273,7 +273,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: categories
+      layout: category
       author_profile: true
       read_time: true
       comments: true
