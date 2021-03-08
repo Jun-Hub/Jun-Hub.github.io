@@ -2,6 +2,7 @@
 title: "Your First Custom View: Clubhouse ProgressBar!"
 date: 2021-02-26 23:50:28 -0400
 categories: android progressBar
+classes: wide
 ---
 
 No doubt about that **Clubhouse** is the most hottest social media recently. There is no special UI/UX which is never have seen anywhere else.
