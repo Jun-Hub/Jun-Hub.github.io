@@ -122,6 +122,7 @@ Description:
 >flingBehavior - logic describing fling behavior.  
 ><br>
 >content - a block which describes the content. Inside this block you can use methods like LazyListScope.item to add a single item or LazyListScope.items to add a list of items.  
+
 <br>
 <br>
 <br>
@@ -133,6 +134,7 @@ What is different *ScrollableColumn* and *LazyColumn*?
 >```LazyColumn``` renders only the visible items on screen, allowing performance gains when rendering a big list. It's equivalent in Android Views is ```RecyclerView```  
 ><br>
 >As the list holds thousands of items, which will impact the app's fluidity when rendered, use ```LazyColumn``` to only render the visible elements on the screen rather than all of them.  
+
 <br>
 <br>
 <br>
