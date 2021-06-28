@@ -23,43 +23,43 @@ MainActivity.kt
 ```kotlin
 class MainActivity: AppCompatActivity() {
 
-	private lateinit var binding: ActivityMainBinding
-	private var hasChanged = false
+    private lateinit var binding: ActivityMainBinding
+    private var hasChanged = false
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		binding = ActivityMainBinding.inflate(layoutInflater)
-		setContentView(binding.root)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-		binding.editText.run {
-			requestFocus()
-			//set TextColor to the hint color
-			setTextColor(context.getColorCompatible(android.R.color.darker_gray))
-			//set position of cursor at the head.
-			setSelection(0)
+        binding.editText.run {
+            requestFocus()
+            //set TextColor to the hint color
+            setTextColor(context.getColorCompatible(android.R.color.darker_gray))
+            //set position of cursor at the head.
+            setSelection(0)
 			
-			addTextChangedListener(object: TextWatcher {
-				override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            addTextChangedListener(object: TextWatcher {
+                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-				override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-					if(!hasChanged) {
-						//this Focusing Hint valid only the first time.
-						hasChanged = true
-						//set TextColor to the normal color
-						setTextColor(context.getColorCompatible(android.R.color.black))
-						//remove the hint in the Text
-						text = text.toString().replace("YOUR_HINT", "").toEditable()
-						//set position of cursor at the second
-						setSelection(1)
-					}
-				}
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    if(!hasChanged) {
+                        //this Focusing Hint valid only the first time.
+                        hasChanged = true
+                        //set TextColor to the normal color
+                        setTextColor(context.getColorCompatible(android.R.color.black))
+                        //remove the hint in the Text
+                        text = text.toString().replace("YOUR_HINT", "").toEditable()
+                        //set position of cursor at the second
+                        setSelection(1)
+                    }
+                }
 
-				override fun afterTextChanged(s: Editable?) {}
+                override fun afterTextChanged(s: Editable?) {}
 
-			})
+            })
 			
-		}
-	}
+        }
+    }
 }
 ```
 
@@ -91,12 +91,15 @@ activity_main.xml
 	
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
+<br>
+<br>
+
+*********************
 
 <br>
 <br>
 
 If there are some mistakes, always welcome your opinion!
-
 
 
 <div id="disqus_thread"></div>
