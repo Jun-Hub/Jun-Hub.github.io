@@ -7,10 +7,9 @@ classes: wide
 
 <br>
 <br>
-<br>
 
 Software Engineers deal with picky requirements. Sometimes, I would just say 'It's impossible because Android does not allow it.'.
-The requirements looks really simple for UI/UX designers, but for us it's not! Anyway Actually I make it.
+The requirements looks really simple for UI/UX designers, but for us it's not! Anyway actually I make it.
 <br>
 <br>
 
@@ -78,13 +77,13 @@ activity_main.xml
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 	
+	<!-- Actually `android:text` will be a tricky hint, because it's focused. -->
 	<EditText
             android:id="@+id/editText"
             android:layout_width="200dp"
             android:layout_height="70dp"
-            android:hint="YOUR_HINT"
+            android:hint=""
             android:inputType="textMultiLine"
-            <!-- Actually `android:text` will be a tricky hint, because it's focused. -->
             android:text="YOUR_HINT"
             android:textSize="16dp"
             app:layout_cosstraintTop_toTopOf="parent"
