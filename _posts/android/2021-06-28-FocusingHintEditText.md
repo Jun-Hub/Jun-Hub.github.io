@@ -91,7 +91,6 @@ activity_main.xml
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 	
-	
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 <br>
