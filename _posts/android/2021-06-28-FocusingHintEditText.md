@@ -5,6 +5,10 @@ categories: android editText
 classes: wide
 ---
 
+<br>
+<br>
+<br>
+
 Software Engineers deal with picky requirements. Sometimes, I would just say 'It's impossible because Android does not allow it.'.
 The requirements looks really simple for UI/UX designers, but for us it's not! Anyway Actually I make it.
 <br>
@@ -80,10 +84,10 @@ activity_main.xml
             android:layout_height="70dp"
             android:hint="YOUR_HINT"
             android:inputType="textMultiLine"
-			<!-- Actually `android:text` will be a tricky hint, because it's focused. -->
+            <!-- Actually `android:text` will be a tricky hint, because it's focused. -->
             android:text="YOUR_HINT"
             android:textSize="16dp"
-			app:layout_cosstraintTop_toTopOf="parent"
+            app:layout_cosstraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
