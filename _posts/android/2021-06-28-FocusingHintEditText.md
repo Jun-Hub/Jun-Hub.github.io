@@ -1,5 +1,5 @@
 ---
-title: "Focusing Hint EditText: Picky requirement from UI Designer"
+title: "Focusing Hint EditText: A Picky requirement from UI Designer"
 date: 2021-06-28 23:20:28 -0400
 categories: android editText
 classes: wide
