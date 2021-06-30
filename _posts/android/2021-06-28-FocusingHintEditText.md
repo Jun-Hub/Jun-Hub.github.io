@@ -22,6 +22,8 @@ After an hour trying, I made it!!
 
 Be Tricky Developer👻
 -------------------------
+<br>
+
 MainActivity.kt
 ```kotlin
 class MainActivity: AppCompatActivity() {
@@ -93,6 +95,92 @@ activity_main.xml
 	
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
+<br>
+<br>
+<br>
+<br>
+
+Real Tricky And Easy Way😈
+-------------------------
+<br>
+
+My team leader let me know this way...
+<br>
+<br>
+
+MainActivity.kt
+```kotlin
+class MainActivity: AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.editText.run {
+            requestFocus()
+			
+            addTextChangedListener(object: TextWatcher {
+                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    if (s.isNullOrBlank()) {
+			hintText.visibility = View.VISIBLE
+		    } else {
+			hintText.visibility = View.GONE
+		    }
+                }
+
+                override fun afterTextChanged(s: Editable?) {}
+
+            })
+			
+        }
+    }
+}
+```
+
+<br>
+<br>
+
+activity_main.xml
+```xml
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+	<EditText
+            android:id="@+id/editText"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:hint=""
+            android:inputType="textMultiLine"
+            android:textSize="16dp"
+            app:layout_cosstraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+	
+	<TextView
+            android:id="@+id/hint_text"
+            style="@style/regular_textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="YOUR_HINT"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/editText"
+            app:layout_constraintLeft_toLeftOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="@+id/editText" />
+	
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
 <br>
 <br>
 
